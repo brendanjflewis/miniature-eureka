@@ -8,7 +8,7 @@ router.get('/notes', (req, res) => {
     res.json(results);
 });
 
-//integrated uuid npm pacakge and reworked library/notesRoutes files to make id work
+// add new note with unique id from uuid npm package, title and text
 router.post('/notes', (req, res) => {
     note = {
         id: uuid.v4(),
@@ -20,9 +20,16 @@ router.post('/notes', (req, res) => {
 });
 
 
-
 module.exports = router;
 
+
+
+
+
+
+
+
+///// OLD CODE /////
 
 // router.get('/notes/:id', (req, res) => {
 //     const result = findById(req.params.id, aniamls);
